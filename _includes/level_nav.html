@@ -1,0 +1,14 @@
+{% comment %}
+  Usage: {% include level_nav.html category="automation" levels="entry,mid,senior,lead" current="senior" %}
+{% endcomment %}
+
+<nav class="level-tabs">
+  {% assign lvls = include.levels | split: "," %}
+  {% for lvl in lvls %}
+    {% assign trimmed = lvl | strip %}
+    <a href="{{ site.baseurl }}/{{ include.category }}/{{ trimmed }}/"
+       class="level-tab {% if trimmed == include.current %}active{% endif %}">
+      {{ trimmed | capitalize }}
+    </a>
+  {% endfor %}
+</nav>

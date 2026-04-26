@@ -1,0 +1,23 @@
+{% comment %}
+  Usage: {% include question_card.html id=1 %}
+  Looks up the question from _questions collection by id.
+{% endcomment %}
+
+{% assign q = site.questions | where: "id", include.id | first %}
+{% if q %}
+<div class="question-card">
+  <a href="{{ q.url | prepend: site.baseurl }}">Q{{ q.id }}: {{ q.title }}</a>
+  <div style="margin-top:6px;">
+    {% for level in q.levels %}
+      <span class="badge badge-{{ level }}">{{ level }}</span>
+    {% endfor %}
+    {% if q.source == "new" %}
+      <span class="badge badge-new">new</span>
+    {% endif %}
+  </div>
+</div>
+{% else %}
+<div class="question-card" style="opacity:0.5;">
+  <strong>Q{{ include.id }}</strong> — <em>Content coming soon</em>
+</div>
+{% endif %}

@@ -3,7 +3,7 @@
 A public knowledge base of QA interview questions, structured by category and seniority level.
 
 ## 🚀 Live Site
-[yourusername.github.io/qa-encyclopedia](https://yourusername.github.io/qa-encyclopedia)
+[7eregaDo.github.io/qa-encyclopedia](https://7eregaDo.github.io/qa-encyclopedia)
 
 ---
 
@@ -36,7 +36,7 @@ Each level page (e.g. `automation/senior.md`) lists all questions for that level
 
 ### Run locally
 ```bash
-git clone https://github.com/yourusername/qa-encyclopedia.git
+git clone https://github.com/7eregaDo/qa-encyclopedia.git
 cd qa-encyclopedia
 bundle install
 bundle exec jekyll serve
@@ -50,7 +50,7 @@ bundle exec jekyll serve
 1. Push this repo to GitHub as `qa-encyclopedia`
 2. Go to **Settings → Pages**
 3. Set source to **Deploy from branch → main → / (root)**
-4. Wait ~2 minutes — your site will be live at `https://yourusername.github.io/qa-encyclopedia`
+4. Wait ~2 minutes — your site will be live at `https://7eregaDo.github.io/qa-encyclopedia`
 
 > **Important:** Update `url` and `baseurl` in `_config.yml` with your actual GitHub username before deploying.
 

@@ -1,0 +1,49 @@
+title: QA Encyclopedia
+description: >
+  A public knowledge base of QA interview questions — covering Manual Testing,
+  Automation, API, CI/CD, Security, Performance, System Design, and more.
+  Structured by seniority level: Entry → Mid → Senior → Lead.
+baseurl: "/qa-encyclopedia"
+url: "https://7eregaDo.github.io"
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Collections
+collections:
+  questions:
+    output: true
+    permalink: /questions/:name/
+
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+      type: "questions"
+    values:
+      layout: "question"
+
+# Navigation
+header_pages:
+  - index.md
+  - behavioral/entry.md
+  - manual-testing/entry.md
+  - automation/entry.md
+  - api-testing/entry.md
+  - ci-cd/entry.md
+  - system-design/entry.md
+  - security-testing/mid.md
+  - performance-testing/entry.md
+  - data-ai-testing/entry.md
+  - qa-theory/entry.md
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - node_modules
+  - vendor
