@@ -1,0 +1,31 @@
+---
+layout: default
+---
+
+<article class="question-page">
+
+  <div class="question-meta">
+    <strong>Q{{ page.id }}</strong> &nbsp;|&nbsp;
+    Category: <strong>{{ page.category }}</strong> &nbsp;|&nbsp;
+    Levels:
+    {% for level in page.levels %}
+      <span class="badge badge-{{ level }}">{{ level }}</span>
+    {% endfor %}
+    {% if page.source == "new" %}
+      <span class="badge badge-new">new</span>
+    {% endif %}
+    {% if page.theory %}
+      <span class="badge badge-mid">theory</span>
+    {% endif %}
+  </div>
+
+  <h1>{{ page.title }}</h1>
+
+  {{ content }}
+
+  <hr>
+  <p style="font-size:0.85rem; color:#888;">
+    <a href="{{ site.baseurl }}/{{ page.category }}/">← Back to {{ page.category }}</a>
+  </p>
+
+</article>
