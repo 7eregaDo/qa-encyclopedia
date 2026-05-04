@@ -1,0 +1,59 @@
+- name: "Behavioural"
+  slug: "behavioral"
+  icon: "◈"
+  description: "Conflict, leadership, and STAR narratives."
+  levels: ["entry", "mid", "senior", "lead"]
+
+- name: "Manual Testing"
+  slug: "manual-testing"
+  icon: "⬡"
+  description: "Test design, exploratory, and risk analysis."
+  levels: ["entry", "mid", "senior", "lead"]
+
+- name: "Automation"
+  slug: "automation"
+  icon: "⬢"
+  description: "Frameworks, CI/CD, and scalability."
+  levels: ["entry", "mid", "senior", "lead"]
+
+- name: "API Testing"
+  slug: "api-testing"
+  icon: "◬"
+  description: "REST, GraphQL, and Contract testing."
+  levels: ["entry", "mid", "senior"]
+
+- name: "CI / CD"
+  slug: "ci-cd"
+  icon: "⌬"
+  description: "Pipelines, quality gates, and deployments."
+  levels: ["entry", "mid", "senior"]
+
+- name: "System Design"
+  slug: "system-design"
+  icon: "❖"
+  description: "Microservices and performance bottlenecks."
+  levels: ["entry", "mid", "senior", "lead"]
+
+- name: "Security Testing"
+  slug: "security-testing"
+  icon: "⧈"
+  description: "OWASP, JWT, and vulnerability scanning."
+  levels: ["mid", "senior", "lead"]
+
+- name: "Performance Testing"
+  slug: "performance-testing"
+  icon: "⚡"
+  description: "Load, soak, and chaos engineering."
+  levels: ["entry", "mid", "senior", "lead"]
+
+- name: "Data & AI Testing"
+  slug: "data-ai-testing"
+  icon: "⊞"
+  description: "ETL, ML bias, and data partitioning."
+  levels: ["entry", "mid", "senior", "lead"]
+
+- name: "QA Theory"
+  slug: "qa-theory"
+  icon: "≣"
+  description: "Testing pyramid, principles, and models."
+  levels: ["entry", "mid", "senior"]

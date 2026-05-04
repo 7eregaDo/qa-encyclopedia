@@ -11,7 +11,7 @@ level: senior
 
 ---
 
-**Level:** [Entry](../entry/) | [Mid](../mid/) | **Senior** | [Lead](../lead/)
+**Level:** [Entry](/automation/entry/) | [Mid](/automation/mid/) | **Senior** | [Lead](/automation/lead/)
 
 <div class="level-description">
 <em>Advanced questions for senior QAs with 5+ years of experience. Focus on strategy, architecture, trade-offs, and cross-team influence.</em>
@@ -21,20 +21,11 @@ level: senior
 
 ### 14 Questions at Senior level
 
-{% include question_card.html id=170 %}
-{% include question_card.html id=215 %}
-{% include question_card.html id=216 %}
-{% include question_card.html id=227 %}
-{% include question_card.html id=352 %}
-{% include question_card.html id=429 %}
-{% include question_card.html id=446 %}
-{% include question_card.html id=447 %}
-{% include question_card.html id=748 %}
-{% include question_card.html id=749 %}
-{% include question_card.html id=750 %}
-{% include question_card.html id=769 %}
-{% include question_card.html id=771 %}
-{% include question_card.html id=772 %}
+{% assign filtered_questions = site.questions | where: "category", page.category | where: "level", page.level | sort: "question_id" %}
+
+{% for q in filtered_questions %}
+  {% include question_card.html id=q.question_id %}
+{% endfor %}
 
 ---
 

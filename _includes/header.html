@@ -1,0 +1,28 @@
+<header class="site-header">
+  <div class="wrapper">
+    
+    <a class="site-title" href="{{ "/" | relative_url }}">
+      QA Encyclopedia
+    </a>
+
+    <div class="nav-root">
+      {% assign current_slug = page.url | split: "/" | slice: 1, 1 | first %}
+      {% assign cat = site.data.categories | where: "slug", current_slug | first %}
+      
+      <span class="nav-current">
+        {% if page.url == "/" %}Explore Domains{% else %}{{ cat.icon }} {{ cat.name }}{% endif %} ▾
+      </span>
+
+      <div class="nav-dropdown">
+        <a href="{{ "/" | relative_url }}">🏠 Dashboard</a>
+        <div style="height: 1px; background: rgba(255,255,255,0.1); margin: 5px 10px;"></div>
+        {% for category in site.data.categories %}
+          <a href="{{ site.baseurl }}/{{ category.slug }}/">
+            {{ category.icon }} {{ category.name }}
+          </a>
+        {% endfor %}
+      </div>
+    </div>
+
+  </div>
+</header>

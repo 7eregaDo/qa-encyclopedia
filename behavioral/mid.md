@@ -1,42 +1,17 @@
 ---
 layout: default
-title: "Behavioural Testing — Mid"
+title: "Behavioural Testing — Middle"
 category: behavioral
 level: mid
 ---
 
-# 🧠 Behavioural Testing
+... header info ...
 
-> Situational and leadership questions using the STAR framework. Tests conflict resolution, prioritisation, mentoring, and stakeholder management.
+### Questions at Entry level
 
----
+{% comment %} Filter collection by category AND level, then sort by ID {% endcomment %}
+{% assign filtered_questions = site.questions | where: "category", page.category | where: "level", page.level | sort: "question_id" %}
 
-**Level:** [Entry](../entry/) | **Mid** | [Senior](../senior/) | [Lead](../lead/)
-
-<div class="level-description">
-<em>Intermediate questions for QA engineers with 2–5 years of experience. Focus on ownership, tool proficiency, and end-to-end problem solving.</em>
-</div>
-
----
-
-### 13 Questions at Mid level
-
-{% include question_card.html id=1 %}
-{% include question_card.html id=2 %}
-{% include question_card.html id=3 %}
-{% include question_card.html id=4 %}
-{% include question_card.html id=5 %}
-{% include question_card.html id=6 %}
-{% include question_card.html id=7 %}
-{% include question_card.html id=8 %}
-{% include question_card.html id=9 %}
-{% include question_card.html id=10 %}
-{% include question_card.html id=11 %}
-{% include question_card.html id=145 %}
-{% include question_card.html id=292 %}
-
----
-
-<p style="font-size:0.85rem; color:#888;">
-  <a href="{{ site.baseurl }}/">← Back to Home</a>
-</p>
+{% for q in filtered_questions %}
+  {% include question_card.html id=q.question_id %}
+{% endfor %}

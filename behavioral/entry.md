@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Behavioural Testing — Entry"
+title: "Behavioural Testing"
 category: behavioral
 level: entry
 ---
@@ -11,7 +11,7 @@ level: entry
 
 ---
 
-**Level:** **Entry** | [Mid](../mid/) | [Senior](../senior/) | [Lead](../lead/)
+**Level:** **Entry** | [Mid](/behavioral/mid/) | [Senior](/behavioral/senior/) | [Lead](/behavioral/lead/)
 
 <div class="level-description">
 <em>Foundational questions for QA engineers with 0–2 years of experience. Focus on core concepts, basic tool usage, and standard workflows.</em>
@@ -19,21 +19,15 @@ level: entry
 
 ---
 
-### 11 Questions at Entry level
+### Questions at Entry level
 
-{% include question_card.html id=1 %}
-{% include question_card.html id=2 %}
-{% include question_card.html id=3 %}
-{% include question_card.html id=4 %}
-{% include question_card.html id=5 %}
-{% include question_card.html id=6 %}
-{% include question_card.html id=7 %}
-{% include question_card.html id=8 %}
-{% include question_card.html id=9 %}
-{% include question_card.html id=10 %}
-{% include question_card.html id=145 %}
+{% assign filtered_questions = site.questions | where: "category", page.category | where: "level", page.level | sort: "question_id" %}
 
----
+{% for q in filtered_questions %}
+  {% include question_card.html id=q.question_id %}
+{% endfor %}
+
+<hr>
 
 <p style="font-size:0.85rem; color:#888;">
   <a href="{{ site.baseurl }}/">← Back to Home</a>

@@ -3,7 +3,9 @@
 {% endcomment %}
 
 <nav class="level-tabs">
-  {% assign lvls = include.levels | split: "," %}
+  {% assign lvls = include.levels | default: "entry,mid,senior,lead" | split: "," %}
+  {% assign icons = 
+  "entry:🟢,mid:🔵,senior:🟡,lead:🔴" | split: "," %}
   {% for lvl in lvls %}
     {% assign trimmed = lvl | strip %}
     <a href="{{ site.baseurl }}/{{ include.category }}/{{ trimmed }}/"

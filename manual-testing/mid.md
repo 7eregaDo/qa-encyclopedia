@@ -11,7 +11,7 @@ level: mid
 
 ---
 
-**Level:** [Entry](../entry/) | **Mid** | [Senior](../senior/) | [Lead](../lead/)
+**Level:** [Entry](/manual-testing/entry/) | **Mid** | [Senior](/manual-testing/senior/) | [Lead](/manual-testing/lead/)
 
 <div class="level-description">
 <em>Intermediate questions for QA engineers with 2–5 years of experience. Focus on ownership, tool proficiency, and end-to-end problem solving.</em>
@@ -21,20 +21,11 @@ level: mid
 
 ### 14 Questions at Mid level
 
-{% include question_card.html id=16 %}
-{% include question_card.html id=17 %}
-{% include question_card.html id=19 %}
-{% include question_card.html id=21 %}
-{% include question_card.html id=23 %}
-{% include question_card.html id=24 %}
-{% include question_card.html id=25 %}
-{% include question_card.html id=142 %}
-{% include question_card.html id=143 %}
-{% include question_card.html id=164 %}
-{% include question_card.html id=166 %}
-{% include question_card.html id=169 %}
-{% include question_card.html id=171 %}
-{% include question_card.html id=226 %}
+{% assign filtered_questions = site.questions | where: "category", page.category | where: "level", page.level | sort: "question_id" %}
+
+{% for q in filtered_questions %}
+  {% include question_card.html id=q.question_id %}
+{% endfor %}
 
 ---
 

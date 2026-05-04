@@ -11,7 +11,7 @@ level: mid
 
 ---
 
-**Level:** [Entry](../entry/) | **Mid** | [Senior](../senior/)
+**Level:** [Entry](/api-testing/entry/) | **Mid** | [Senior](/api-testing/senior/)
 
 <div class="level-description">
 <em>Intermediate questions for QA engineers with 2–5 years of experience. Focus on ownership, tool proficiency, and end-to-end problem solving.</em>
@@ -21,15 +21,11 @@ level: mid
 
 ### 9 Questions at Mid level
 
-{% include question_card.html id=74 %}
-{% include question_card.html id=75 %}
-{% include question_card.html id=76 %}
-{% include question_card.html id=77 %}
-{% include question_card.html id=79 %}
-{% include question_card.html id=126 %}
-{% include question_card.html id=187 %}
-{% include question_card.html id=759 %}
-{% include question_card.html id=760 %}
+{% assign filtered_questions = site.questions | where: "category", page.category | where: "level", page.level | sort: "question_id" %}
+
+{% for q in filtered_questions %}
+  {% include question_card.html id=q.question_id %}
+{% endfor %}
 
 ---
 
