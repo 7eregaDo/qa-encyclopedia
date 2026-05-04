@@ -4,22 +4,71 @@ layout: default
 
 <article class="question-page">
 
+  {% comment %} === Get all questions in same category + level === {% endcomment %}
+  {% assign all_questions = site.questions 
+      | where: "category", page.category 
+      | where: "level", page.level 
+      | sort: "question_id" %}
+
+  {% comment %} === Find current question index === {% endcomment %}
+  {% assign current_index = 0 %}
+  {% for q in all_questions %}
+    {% if q.question_id == page.question_id %}
+      {% assign current_index = forloop.index0 %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+
+  {% assign total = all_questions.size %}
+  {% assign prev_index = current_index | minus: 1 %}
+  {% assign next_index = current_index | plus: 1 %}
+
+  {% assign prev_question = all_questions[prev_index] %}
+  {% assign next_question = all_questions[next_index] %}
+
   <div class="question-meta">
-    <strong>ID_{{ page.question_id }}</strong> &nbsp;|&nbsp;
-    Domain: <strong>{{ page.category | capitalize }}</strong> &nbsp;|&nbsp;
+    <strong>ID_{{ page.question_id }}</strong> 
+    &nbsp;|&nbsp; 
+    Domain: <strong>{{ page.category | capitalize }}</strong> 
+    &nbsp;|&nbsp; 
     Level: <span class="badge badge-{{ page.level }}">{{ page.level }}</span>
   </div>
 
-  <h1 style="margin-top: 20px; font-size: 2.2rem;">{{ page.title }}</h1>
+  <div style="margin: 10px 0 30px 0; color: #94a3b8; font-size: 1.1rem;">
+    Question <strong>{{ current_index | plus: 1 }}</strong> of <strong>{{ total }}</strong>
+  </div>
+
+  <h1 style="margin-top: 10px; font-size: 2.3rem;">{{ page.title }}</h1>
 
   <div class="question-content">
     {{ content }}
   </div>
 
-  <div style="margin-top: 40px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1);">
-    <a href="{{ site.baseurl }}/{{ page.category }}/{{ page.level }}/" style="color: #06b6d4; text-decoration: none; font-weight: bold;">
-      ← Return to {{ page.category | capitalize }} ({{ page.level | capitalize }})
+  <hr style="margin: 50px 0; border-color: rgba(255,255,255,0.1);">
+
+  <!-- Navigation -->
+  <div class="question-nav">
+    {% if prev_question %}
+      <a href="{{ prev_question.url }}" class="nav-btn prev">
+        ← Previous<br>
+        <small>Q{{ prev_question.question_id }}: {{ prev_question.title | truncate: 60 }}</small>
+      </a>
+    {% else %}
+      <div class="nav-btn disabled">← Previous</div>
+    {% endif %}
+
+    <a href="{{ site.baseurl }}/{{ page.category }}/{{ page.level }}/" class="nav-btn back-to-list">
+      ↑ Back to All Questions
     </a>
+
+    {% if next_question %}
+      <a href="{{ next_question.url }}" class="nav-btn next">
+        Next →<br>
+        <small>Q{{ next_question.question_id }}: {{ next_question.title | truncate: 60 }}</small>
+      </a>
+    {% else %}
+      <div class="nav-btn disabled">Next →</div>
+    {% endif %}
   </div>
 
 </article>
