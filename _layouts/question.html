@@ -49,12 +49,9 @@ layout: default
   <!-- Navigation -->
   <div class="question-nav">
     {% if prev_question %}
-      <a href="{{ prev_question.url }}" class="nav-btn prev">
-        ← Previous<br>
-        <small>Q{{ prev_question.question_id }}: {{ prev_question.title | truncate: 60 }}</small>
-      </a>
+      <a href="{{ prev_question.url }}" class="nav-btn prev">← Previous<br></a>
     {% else %}
-      <div class="nav-btn disabled">← Previous</div>
+      <div class="nav-btn disabled" style="visibility: hidden;">← Previous</div>
     {% endif %}
 
     <a href="{{ site.baseurl }}/{{ page.category }}/{{ page.level }}/" class="nav-btn back-to-list">
@@ -62,12 +59,9 @@ layout: default
     </a>
 
     {% if next_question %}
-      <a href="{{ next_question.url }}" class="nav-btn next">
-        Next →<br>
-        <small>Q{{ next_question.question_id }}: {{ next_question.title | truncate: 60 }}</small>
-      </a>
+      <a href="{{ next_question.url }}" class="nav-btn next">Next →<br></a>
     {% else %}
-      <div class="nav-btn disabled">Next →</div>
+      <div class="nav-btn disabled" style="visibility: hidden;">Next →</div>
     {% endif %}
   </div>
 

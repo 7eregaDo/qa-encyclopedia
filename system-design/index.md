@@ -13,12 +13,12 @@ title: "System Design"
 
 | Level | Questions | Focus |
 |-------|-----------|-------|
-| [Entry](./entry/) | 2 questions | Foundational concepts and patterns for entry-level QA engineers |
-| [Mid](./mid/) | 2 questions | Foundational concepts and patterns for mid-level QA engineers |
-| [Senior](./senior/) | 12 questions | Foundational concepts and patterns for senior-level QA engineers |
+| [Entry](./entry/) | 10 questions | Foundational concepts and patterns for entry-level QA engineers |
+| [Mid](./mid/) | 10 questions | Foundational concepts and patterns for mid-level QA engineers |
+| [Senior](./senior/) | 10 questions | Foundational concepts and patterns for senior-level QA engineers |
 | [Lead](./lead/) | 10 questions | Foundational concepts and patterns for lead-level QA engineers |
 
-**Total: 26 questions in this category**
+**Total: 40 questions in this category**
 
 ---
 

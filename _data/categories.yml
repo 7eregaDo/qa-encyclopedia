@@ -20,13 +20,13 @@
   slug: "api-testing"
   icon: "◬"
   description: "REST, GraphQL, and Contract testing."
-  levels: ["entry", "mid", "senior"]
+  levels: ["entry", "mid", "senior", "lead"]
 
 - name: "CI / CD"
   slug: "ci-cd"
   icon: "⌬"
   description: "Pipelines, quality gates, and deployments."
-  levels: ["entry", "mid", "senior"]
+  levels: ["entry", "mid", "senior", "lead"]
 
 - name: "System Design"
   slug: "system-design"
@@ -55,5 +55,4 @@
 - name: "QA Theory"
   slug: "qa-theory"
   icon: "≣"
-  description: "Testing pyramid, principles, and models."
   levels: ["entry", "mid", "senior"]
