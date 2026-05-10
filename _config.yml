@@ -12,6 +12,10 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
+# Permalinks — "pretty" builds all pages as folder/index.html so
+# /manual-testing/entry/ works on GitHub Pages (not just /manual-testing/entry.html)
+permalink: pretty
+
 # Collections
 collections:
   questions:
@@ -50,6 +54,3 @@ exclude:
   - node_modules
   - vendor
   - prompt.md
-  - context_summary.md
-  - NEW_QUESTIONS_REFERENCE.md
-  - Blow your QA Interview UP !.md
