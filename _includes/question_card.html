@@ -6,7 +6,7 @@
   <!-- Top: Question Number + Title -->
   <div class="question-header">
     <span class="question-number">Q{{ q.question_id }}</span>
-    <h3><a href="{{ q.url }}">{{ q.title }}</a></h3>
+    <h3><a href="{{ q.url | prepend: site.baseurl }}">{{ q.title }}</a></h3>
   </div>
 
   <!-- Clean Preview (removes Intent, Seniority Shift, Key Terms, etc.) -->
@@ -23,7 +23,7 @@
 
   <!-- Centered Button at the bottom -->
   <div class="question-footer">
-    <a href="{{ q.url }}" class="read-more-btn">View Full Details</a>
+    <a href="{{ q.url | prepend: site.baseurl }}" class="read-more-btn">View Full Details</a>
   </div>
 
 </div>
