@@ -52,13 +52,11 @@ bundle exec jekyll serve
 3. Set source to **Deploy from branch → main → / (root)**
 4. Wait ~2 minutes — your site will be live at `https://7eregaDo.github.io/qa-encyclopedia`
 
-> **Important:** Update `url` and `baseurl` in `_config.yml` with your actual GitHub username before deploying.
-
 ---
 
 ## ✍️ Adding a New Question
 
-1. Create `_questions/qXXX.md` using the template below
+1. Create `_questions/module/level/qXXX.md` using the template below
 2. Add the question number to the relevant level pages
 
 ### Question template
@@ -67,9 +65,10 @@ bundle exec jekyll serve
 id: 999
 title: "Your question title here"
 category: automation
-levels: [entry, mid]
-theory: false
-source: new   # use 'pdf' for original questions, 'new' for chat additions
+level: entry/mid/senior/lead
+available_levels: "entry,mid,senior,lead"
+level_description: >
+    Some text
 ---
 
 ## Intent
@@ -88,22 +87,12 @@ What this question is testing.
 ## Seniority Shift
 - **Entry/Mid:** Focus on...
 - **Senior/Lead:** Focus on...
+
+## Key Terms
+| Term | Definition |
+|------|------------|
+| **Risk-Based Testing** | ... |
 ```
-
----
-
-## 📊 Question Register
-
-| Range | Topic |
-|-------|-------|
-| 1–15 | Behavioral Leadership & Conflict |
-| 16–100 | Manual Testing & SQL Fundamentals |
-| 101–200 | Performance, Accessibility & Mobile |
-| 201–350 | Automation, CI/CD & Cloud |
-| 351–500 | System Design & Architecture |
-| 501–744 | Data, AI & Regulated Software |
-| 745–792 | Strategic Architecture (New) |
-
 ---
 
 ## 🤝 Contributing

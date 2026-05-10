@@ -1,0 +1,49 @@
+---
+layout: default
+---
+
+<article class="level-page">
+
+  <div class="module-container">
+
+    <h1 style="margin-bottom: 8px;">{{ page.title }}</h1>
+    
+    <p class="level-subtitle">{{ page.description | default: site.data.categories | where: "slug", page.category | first | map: "description" }}</p>
+
+    {% include level_nav.html 
+         category=page.category 
+         levels=page.available_levels 
+         current=page.level %}
+
+    <div class="level-description">
+      {{ page.level_description }}
+    </div>
+
+    <div class="question-list-grid">
+      {% assign filtered_questions = site.questions 
+          | where: "category", page.category 
+          | where: "level", page.level 
+          | sort: "question_id" %}
+
+      {% for q in filtered_questions %}
+        {% include question_card.html id=q.question_id %}
+      {% endfor %}
+    </div>
+
+    {% if filtered_questions.size == 0 %}
+      <p style="text-align:center; padding: 60px; color:#64748b; font-size:1.1rem;">
+        No questions available yet in this level.
+      </p>
+    {% endif %}
+
+    <hr style="margin: 60px 0; border-color: rgba(255,255,255,0.08);">
+
+    <p>
+      <a href="{{ site.baseurl }}/{{ page.category }}/" style="color: #06b6d4; text-decoration: none;">
+        ← Back to {{ page.category | capitalize }} Category
+      </a>
+    </p>
+
+  </div>
+
+</article>

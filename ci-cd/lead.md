@@ -1,7 +1,7 @@
 ---
 layout: level
-title: "Behavioural — Lead"
-category: behavioral
+title: "CI / CD — Lead"
+category: ci-cd
 level: lead
 available_levels: "entry,mid,senior,lead"
 level_description: >

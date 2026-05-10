@@ -1,7 +1,7 @@
 ---
 layout: level
-title: "Behavioural — Lead"
-category: behavioral
+title: "API Testing — Lead"
+category: api-testing
 level: lead
 available_levels: "entry,mid,senior,lead"
 level_description: >

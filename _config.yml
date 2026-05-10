@@ -16,7 +16,7 @@ plugins:
 collections:
   questions:
     output: true
-    permalink: /questions/:name/
+    permalink: /:path/
 
 # Default front matter
 defaults:
@@ -25,6 +25,8 @@ defaults:
       type: "questions"
     values:
       layout: "question"
+      category: ""
+      level: ""
 
 # Navigation
 header_pages:
@@ -47,3 +49,7 @@ exclude:
   - README.md
   - node_modules
   - vendor
+  - prompt.md
+  - context_summary.md
+  - NEW_QUESTIONS_REFERENCE.md
+  - Blow your QA Interview UP !.md
