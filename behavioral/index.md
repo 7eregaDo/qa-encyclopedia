@@ -13,12 +13,12 @@ title: "Behavioural Testing"
 
 | Level | Questions | Focus |
 |-------|-----------|-------|
-| [Entry](./entry/) | 11 questions | Foundational concepts and patterns for entry-level QA engineers |
-| [Mid](./mid/) | 13 questions | Foundational concepts and patterns for mid-level QA engineers |
-| [Senior](./senior/) | 17 questions | Foundational concepts and patterns for senior-level QA engineers |
-| [Lead](./lead/) | 22 questions | Foundational concepts and patterns for lead-level QA engineers |
+| [Entry](./entry/) | 10 questions | Foundational concepts and patterns for entry-level QA engineers |
+| [Mid](./mid/) | 10 questions | Foundational concepts and patterns for mid-level QA engineers |
+| [Senior](./senior/) | 10 questions | Foundational concepts and patterns for senior-level QA engineers |
+| [Lead](./lead/) | 10 questions | Foundational concepts and patterns for lead-level QA engineers |
 
-**Total: 63 questions in this category**
+**Total: 40 questions in this category**
 
 ---
 
