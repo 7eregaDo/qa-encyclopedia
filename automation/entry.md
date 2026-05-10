@@ -1,7 +1,7 @@
 ---
 layout: level
 title: "Automation Testing — Entry"
-category: automation-testing
+category: automation
 level: entry
 available_levels: "entry,mid,senior,lead"
 level_description: >
