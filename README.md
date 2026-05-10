@@ -1,40 +1,80 @@
 # QA Encyclopedia
 
-A public knowledge base of QA interview questions, structured by category and seniority level.
+> A free, open-source knowledge base of 300+ QA interview questions — structured by domain and seniority level, with model answers, seniority guides, and key term definitions.
 
-## 🚀 Live Site
-[7eregaDo.github.io/qa-encyclopedia](https://7eregaDo.github.io/qa-encyclopedia)
+🔗 **[Live Site → 7eregaDo.github.io/qa-encyclopedia](https://7eregaDo.github.io/qa-encyclopedia)**
 
 ---
 
-## 📁 Structure
+## Why this exists
+
+Most QA interview prep resources give you a question and a one-line answer. They don't tell you:
+
+- What the interviewer is actually testing for
+- What a **Senior** answer looks like versus a **Mid** answer
+- Which terms you need to know and what they mean
+
+The QA Encyclopedia fixes that.
+
+---
+
+## What's inside
+
+Every question includes:
+
+| Section | What it gives you |
+|---|---|
+| **The Intent** | What the interviewer is really probing for |
+| **STAR Answer** | A full model answer using a real-world scenario |
+| **Seniority Shift** | A table showing Entry / Mid / Senior / Lead answer depth |
+| **Key Terms** | Every relevant term defined clearly |
+
+---
+
+## Domains covered
+
+| Domain | Levels | Questions |
+|---|---|---|
+| 🧠 Behavioural | Entry → Lead | 40 |
+| 🔍 Manual Testing | Entry → Lead | 40 |
+| 🤖 Automation Engineering | Entry → Lead | 40 |
+| 🔌 API Testing | Entry → Lead | 40 |
+| ⚙️ CI / CD | Entry → Lead | 40 |
+| 🏗️ System Design | Entry → Lead | 40 |
+| 🔒 Security Testing | Mid → Lead | 30 |
+| ⚡ Performance Testing | Entry → Lead | 40 |
+| 📊 Data & AI Testing | Entry → Lead | 40 |
+| 📚 QA Theory & Fundamentals | Entry → Senior | 30 |
+
+**Total: 360 questions**
+
+---
+
+## Project structure
 
 ```
 qa-encyclopedia/
 ├── _questions/          # One .md file per question (single source of truth)
-├── behavioral/          # entry, mid, senior, lead
-├── manual-testing/      # entry, mid, senior, lead
-├── automation/          # entry, mid, senior, lead
-├── api-testing/         # entry, mid, senior
-├── ci-cd/               # entry, mid, senior
-├── system-design/       # entry, mid, senior, lead
-├── security-testing/    # mid, senior, lead
-├── performance-testing/ # entry, mid, senior, lead
-├── data-ai-testing/     # entry, mid, senior, lead
-└── qa-theory/           # entry, mid, senior
+├── behavioral/
+├── manual-testing/
+├── automation/
+├── api-testing/
+├── ci-cd/
+├── system-design/
+├── security-testing/
+├── performance-testing/
+├── data-ai-testing/
+└── qa-theory/
 ```
 
-Each level page (e.g. `automation/senior.md`) lists all questions for that level with links to the full question page in `_questions/`.
+Each category folder contains level pages (`entry.md`, `mid.md`, `senior.md`, `lead.md`) that list all questions for that level and link to the full question pages in `_questions/`.
 
 ---
 
-## 🛠️ Local Setup
+## Run it locally
 
-### Prerequisites
-- Ruby 3.x
-- Bundler (`gem install bundler`)
+**Prerequisites:** Ruby 3.x, Bundler (`gem install bundler`)
 
-### Run locally
 ```bash
 git clone https://github.com/7eregaDo/qa-encyclopedia.git
 cd qa-encyclopedia
@@ -45,62 +85,44 @@ bundle exec jekyll serve
 
 ---
 
-## 🌐 GitHub Pages Deployment
+## Adding a question
 
-1. Push this repo to GitHub as `qa-encyclopedia`
-2. Go to **Settings → Pages**
-3. Set source to **Deploy from branch → main → / (root)**
-4. Wait ~2 minutes — your site will be live at `https://7eregaDo.github.io/qa-encyclopedia`
+1. Create `_questions/<category>/<level>/qXXX.md` using the template below
+2. The question will appear automatically on the relevant level page
 
----
-
-## ✍️ Adding a New Question
-
-1. Create `_questions/module/level/qXXX.md` using the template below
-2. Add the question number to the relevant level pages
-
-### Question template
 ```yaml
 ---
-id: 999
+question_id: 999
 title: "Your question title here"
-category: automation
-level: entry/mid/senior/lead
-available_levels: "entry,mid,senior,lead"
-level_description: >
-    Some text
+category: api-testing
+level: senior
 ---
 
-## Intent
-What this question is testing.
+## The Intent
+What the interviewer is testing for.
 
-## Answer (STAR)
-
+## The STAR Script
 **Situation:** ...
-
 **Task:** ...
-
 **Action:** ...
-
 **Result:** ...
 
 ## Seniority Shift
-- **Entry/Mid:** Focus on...
-- **Senior/Lead:** Focus on...
+| Level | Expected Depth |
+|-------|---------------|
+| **Entry** | ... |
+| **Mid** | ... |
+| **Senior** | ... |
+| **Lead** | ... |
 
 ## Key Terms
 | Term | Definition |
 |------|------------|
-| **Risk-Based Testing** | ... |
+| **Term** | Definition here |
 ```
----
-
-## 🤝 Contributing
-
-PRs welcome. Please follow the question template and map your question to the correct level files.
 
 ---
 
-## 📄 License
+## License
 
 MIT
