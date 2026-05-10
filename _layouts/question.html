@@ -49,7 +49,7 @@ layout: default
   <!-- Navigation -->
   <div class="question-nav">
     {% if prev_question %}
-      <a href="{{ prev_question.url }}" class="nav-btn prev">← Previous<br></a>
+      <a href="{{ prev_question.url | prepend: site.baseurl }}" class="nav-btn prev">← Previous<br></a>
     {% else %}
       <div class="nav-btn disabled" style="visibility: hidden;">← Previous</div>
     {% endif %}
@@ -59,7 +59,7 @@ layout: default
     </a>
 
     {% if next_question %}
-      <a href="{{ next_question.url }}" class="nav-btn next">Next →<br></a>
+      <a href="{{ next_question.url | prepend: site.baseurl }}" class="nav-btn next">Next →<br></a>
     {% else %}
       <div class="nav-btn disabled" style="visibility: hidden;">Next →</div>
     {% endif %}
