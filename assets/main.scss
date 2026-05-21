@@ -211,7 +211,7 @@ table {
 /* ── 7. Buttons, Badges & Footers ── */
 .question-footer {
   display: flex;
-  justify-content: center; /* Center the "View Details" button */
+  justify-content: center;
   align-items: center;
   width: 100%;
   margin-top: auto; 
@@ -258,7 +258,7 @@ table {
 }
 
 .nav-btn {
-  flex: 1; /* Keep equal width */
+  flex: 1;
   padding: 16px 20px;
   border: 1px solid $border-glass;
   border-radius: 12px;
@@ -270,9 +270,7 @@ table {
   &:hover { border-color: $accent-cyan; transform: translateY(-2px); }
   &.prev { text-align: left; }
   &.next { text-align: right; }
-  
-  /* Space preservation for missing buttons */
-  &.disabled { visibility: hidden; pointer-events: none; } 
+  &.disabled { visibility: hidden; pointer-events: none; }
 
   small { display: block; margin-top: 6px; opacity: 0.6; font-size: 0.8rem; }
 }
@@ -299,4 +297,166 @@ table {
 
 .level-description {
   padding: 20px;
+}
+
+/* ── 10. Mobile Responsive Fixes ── */
+@media (max-width: 768px) {
+
+  /* Header: allow wrapping on small screens */
+  .site-header {
+    min-height: auto;
+    padding: 12px 0;
+
+    .wrapper {
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+  }
+
+  .site-title {
+    font-size: 1.3rem !important;
+  }
+
+  /* Nav: full-width pill on mobile */
+  .nav-root {
+    margin-left: 0;
+    width: 100%;
+
+    .nav-current {
+      width: 100%;
+      display: block;
+      text-align: center;
+      box-sizing: border-box;
+    }
+  }
+
+  /* Dropdown: full-width on mobile */
+  .nav-dropdown {
+    width: 100%;
+    right: 0;
+    left: 0;
+    top: 48px;
+  }
+
+  /* Grids: single column — fixes 420px minmax overflowing phone screens */
+  .category-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .question-list-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Tables: horizontal scroll instead of overflow */
+  table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+
+    tr, td, th {
+      white-space: normal;
+      min-width: 80px;
+    }
+  }
+
+  .stats-table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Question nav: stack vertically instead of squishing three buttons */
+  .question-nav {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .nav-btn {
+    text-align: center !important;
+    width: 100%;
+    box-sizing: border-box;
+
+    /* Hide the invisible spacer buttons — no point stacking invisible space */
+    &.disabled {
+      display: none;
+    }
+  }
+
+  /* Level tabs already flex-wrap but give them breathing room */
+  .level-nav-bar {
+    gap: 8px;
+  }
+
+  .level-tab {
+    padding: 6px 14px;
+    font-size: 0.8rem;
+  }
+
+  /* Headings */
+  .level-page h1 {
+    font-size: 1.8rem;
+  }
+
+  h1 {
+    font-size: 2rem !important;
+  }
+
+  /* Question content inner blocks */
+  .question-content {
+    div, blockquote {
+      padding: 14px;
+    }
+
+    pre, code {
+      overflow-x: auto;
+      word-break: break-word;
+    }
+  }
+
+  /* Wrapper padding: tighter on mobile */
+  .wrapper {
+    padding: 0 15px;
+  }
+
+  .page-content {
+    padding: 30px 0 !important;
+  }
+}
+
+/* ── 11. Extra-small screens (phones < 480px) ── */
+@media (max-width: 480px) {
+  .site-title {
+    font-size: 1.1rem !important;
+  }
+
+  .level-page h1 {
+    font-size: 1.5rem;
+  }
+
+  h1 {
+    font-size: 1.6rem !important;
+  }
+
+  .question-card {
+    padding: 14px;
+  }
+
+  /* Full-width CTA button */
+  .read-more-btn {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  /* Back button in question nav */
+  .nav-btn.back-to-list {
+    text-align: center;
+  }
+}
+
+@media (max-height: 500px) and (orientation: landscape) {
+  .site-header {
+    position: relative; // unstick it in landscape-phone
+    min-height: auto;
+  }
 }
