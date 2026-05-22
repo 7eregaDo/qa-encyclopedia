@@ -199,6 +199,17 @@ table {
     color: $text-main !important;
   }
 
+  /* Inline code styling - removes dark tooltip overlay */
+  code {
+    background: transparent !important;
+    border: none !important;
+    padding: 0 4px !important;
+    color: $accent-neon !important;
+    font-family: 'Monaco', 'Courier New', monospace;
+    font-size: 0.9em;
+    box-shadow: none !important;
+  }
+  
   /* STAR Logic Highlighting */
   strong {
     color: $accent-cyan;

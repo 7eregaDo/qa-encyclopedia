@@ -13,8 +13,8 @@ title: "Security Testing"
 
 | Level | Questions | Focus |
 |-------|-----------|-------|
-| [Mid](./mid/) | 10 questions | Foundational concepts and patterns for mid-level QA engineers |
-| [Senior](./senior/) | 10 questions | Foundational concepts and patterns for senior-level QA engineers |
+| [Mid](./mid/) | 20 questions | Foundational concepts and patterns for mid-level QA engineers |
+| [Senior](./senior/) | 20 questions | Foundational concepts and patterns for senior-level QA engineers |
 | [Lead](./lead/) | 10 questions | Foundational concepts and patterns for lead-level QA engineers |
 
 **Total: 30 questions in this category**

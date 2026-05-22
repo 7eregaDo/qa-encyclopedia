@@ -36,17 +36,17 @@ Every question includes:
 | Domain | Levels | Questions |
 |---|---|---|
 | 🧠 Behavioural | Entry → Lead | 40 |
-| 🔍 Manual Testing | Entry → Lead | 40 |
-| 🤖 Automation Engineering | Entry → Lead | 40 |
+| 🔍 Manual Testing | Entry → Lead | 45 |
+| 🤖 Automation Engineering | Entry → Lead | 55 |
 | 🔌 API Testing | Entry → Lead | 40 |
-| ⚙️ CI / CD | Entry → Lead | 40 |
-| 🏗️ System Design | Entry → Lead | 40 |
-| 🔒 Security Testing | Mid → Lead | 30 |
+| ⚙️ CI / CD | Entry → Lead | 50 |
+| 🏗️ System Design | Entry → Lead | 45 |
+| 🔒 Security Testing | Mid → Lead | 50 |
 | ⚡ Performance Testing | Entry → Lead | 40 |
-| 📊 Data & AI Testing | Entry → Lead | 40 |
-| 📚 QA Theory & Fundamentals | Entry → Senior | 30 |
+| 📊 Data & AI Testing | Entry → Lead | 70 |
+| 📚 QA Theory & Fundamentals | Entry → Senior | 35 |
 
-**Total: 360 questions**
+**Total: 470 questions**
 
 ---
 

@@ -14,7 +14,7 @@ title: "QA Theory & Fundamentals"
 | Level | Questions | Focus |
 |-------|-----------|-------|
 | [Entry](./entry/) | 10 questions | Foundational concepts and patterns for entry-level QA engineers |
-| [Mid](./mid/) | 10 questions | Foundational concepts and patterns for mid-level QA engineers |
+| [Mid](./mid/) | 15 questions | Foundational concepts and patterns for mid-level QA engineers |
 | [Senior](./senior/) | 10 questions | Foundational concepts and patterns for senior-level QA engineers |
 
 **Total: 30 questions in this category**
